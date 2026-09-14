@@ -1,0 +1,393 @@
+/* Page header */
+.ld-page-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.ld-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-sec);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ld-back-btn:hover { background: var(--surface3); color: var(--text-pri); }
+.ld-back-btn svg { width: 14px; height: 14px; }
+
+.ld-lot-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-pri);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ld-lot-desc {
+  font-size: 13px;
+  color: var(--text-sec);
+  margin: 4px 0 0;
+}
+
+.ld-lot-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 6px 0 0;
+  font-weight: 500;
+}
+
+/* Sac grid */
+.ld-sac-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .ld-sac-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Sac card */
+.ld-sac-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ld-sac-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+}
+
+.ld-sac-label {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  font-family: var(--mono);
+}
+
+.ld-sac-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+}
+
+.ld-sac-count {
+  font-size: 11px;
+  color: rgba(255,255,255,.7);
+  display: block;
+}
+
+.ld-sac-icon-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: rgba(255,255,255,.15);
+  border: none;
+  cursor: pointer;
+  color: rgba(255,255,255,.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s;
+  flex-shrink: 0;
+}
+.ld-sac-icon-btn:hover { background: rgba(255,255,255,.25); }
+.ld-sac-icon-btn svg { width: 14px; height: 14px; }
+
+/* Sac body */
+.ld-sac-body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Pochette block */
+.ld-pochette-block {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ld-pochette-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  cursor: default;
+}
+
+.ld-pochette-emoji {
+  font-size: 16px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.ld-pochette-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-pri);
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ld-pochette-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ld-icon-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s, color .15s;
+  flex-shrink: 0;
+}
+.ld-icon-btn:hover { background: var(--surface3); color: var(--text-sec); }
+.ld-icon-btn svg { width: 13px; height: 13px; }
+.ld-icon-btn-danger:hover { background: rgba(248,113,113,.12); color: #f87171; }
+
+/* Direct block */
+.ld-direct-block {
+  background: rgba(245,158,11,.06);
+  border: 1px solid rgba(245,158,11,.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ld-direct-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+}
+.ld-direct-header svg {
+  width: 15px;
+  height: 15px;
+  color: #F59E0B;
+  flex-shrink: 0;
+}
+.ld-direct-header .ld-pochette-name { color: #B45309; }
+[data-theme="dark"] .ld-direct-header .ld-pochette-name { color: #FCD34D; }
+
+/* Items list */
+.ld-items-list {
+  padding: 0 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ld-item-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.ld-item-id {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-sec);
+  background: var(--surface2);
+  padding: 1px 6px;
+  border-radius: 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ld-item-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-pri);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ld-item-qty {
+  width: 52px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid var(--input-border);
+  border-radius: 7px;
+  background: var(--input-bg);
+  color: var(--text-pri);
+  font-family: var(--mono);
+  flex-shrink: 0;
+}
+.ld-item-qty:focus { outline: none; border-color: var(--accent); }
+
+.ld-item-del {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background .15s, color .15s;
+}
+.ld-item-del:hover { background: rgba(248,113,113,.12); color: #f87171; }
+.ld-item-del svg { width: 13px; height: 13px; }
+
+/* Add item button */
+.ld-add-item-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+  padding: 5px 10px;
+  background: none;
+  border: 1px dashed var(--border-med);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: border-color .15s, color .15s, background .15s;
+  align-self: flex-start;
+}
+.ld-add-item-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-muted); }
+.ld-add-item-btn svg { width: 11px; height: 11px; }
+
+/* Sac footer */
+.ld-sac-footer {
+  display: flex;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.ld-footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-sec);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: background .15s, color .15s;
+}
+.ld-footer-btn:hover { background: var(--surface3); color: var(--text-pri); }
+.ld-footer-btn svg { width: 13px; height: 13px; }
+.ld-footer-btn-direct { border-color: rgba(245,158,11,.3); color: #B45309; }
+.ld-footer-btn-direct:hover { background: rgba(245,158,11,.08); color: #92400E; }
+[data-theme="dark"] .ld-footer-btn-direct { color: #FCD34D; }
+[data-theme="dark"] .ld-footer-btn-direct:hover { color: #FDE68A; }
+
+/* Add sac card */
+.ld-add-sac-card {
+  background: var(--card);
+  border: 2px dashed var(--border-med);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+  min-height: 120px;
+  padding: 32px;
+}
+.ld-add-sac-card:hover {
+  border-color: var(--accent);
+  background: var(--accent-muted);
+}
+
+/* Consumable search list */
+.ld-cons-list {
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px;
+  background: var(--surface2);
+}
+
+.ld-cons-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  text-align: left;
+  transition: background .1s;
+  width: 100%;
+}
+.ld-cons-row:hover { background: var(--surface3); }
+.ld-cons-row.selected { background: var(--accent-muted); }
+
+.ld-cons-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-pri);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}

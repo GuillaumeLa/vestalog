@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: vestalog-postgres
+    environment:
+      POSTGRES_DB: vestalog
+      POSTGRES_USER: vestalog
+      POSTGRES_PASSWORD: vestalog
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vestalog -d vestalog"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: vestalog-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@vestalog.fr
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

@@ -1,0 +1,90 @@
+/* User menu wrap */
+.m-user-wrap {
+  position: relative;
+}
+
+.m-avatar-btn {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 700;
+  border-radius: 50%;
+  transition: box-shadow .14s;
+}
+.m-avatar-btn:hover,
+.m-avatar-btn.open {
+  box-shadow: 0 0 0 3px rgba(217, 37, 29, .35);
+}
+
+/* Dropdown */
+.m-user-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 220px;
+  background: var(--surface);
+  border: 1px solid var(--border-med);
+  border-radius: 14px;
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  overflow: hidden;
+  animation: mDropIn .14s ease;
+}
+@keyframes mDropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.m-udrop-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+}
+.m-udrop-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-pri);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.m-udrop-email {
+  font-size: 11px;
+  color: var(--text-sec);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.m-udrop-divider {
+  height: 1px;
+  background: var(--border);
+}
+
+.m-udrop-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  color: #f87171;
+  cursor: pointer;
+  transition: background .12s;
+}
+.m-udrop-item:hover { background: rgba(248, 113, 113, .08); }
+.m-udrop-item svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* Logo image */
+.m-nav-logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+}

@@ -1,0 +1,115 @@
+/* Sidebar logout button */
+.adm-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a4a5a;
+  cursor: pointer;
+  transition: background .14s, color .14s;
+  margin-top: 4px;
+}
+.adm-logout-btn:hover {
+  background: rgba(217, 37, 29, .12);
+  color: #f87171;
+}
+.adm-logout-btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Topbar user menu */
+.adm-user-menu-wrap {
+  position: relative;
+}
+
+.adm-avatar-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: box-shadow .14s, opacity .14s;
+  font-family: var(--font);
+  font-weight: 700;
+}
+.adm-avatar-btn:hover,
+.adm-avatar-btn.open {
+  box-shadow: 0 0 0 3px rgba(217, 37, 29, .35);
+}
+
+.adm-user-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 230px;
+  background: var(--surface);
+  border: 1px solid var(--border-med);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  overflow: hidden;
+  animation: dropIn .14s ease;
+}
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.adm-udrop-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+.adm-udrop-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-pri);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.adm-udrop-email {
+  font-size: 11px;
+  color: var(--text-sec);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.adm-udrop-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+
+.adm-udrop-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-pri);
+  cursor: pointer;
+  text-align: left;
+  transition: background .12s, color .12s;
+}
+.adm-udrop-item:hover { background: var(--surface2); }
+.adm-udrop-item.danger { color: #f87171; }
+.adm-udrop-item.danger:hover { background: rgba(248,113,113,.08); }
+.adm-udrop-item svg { width: 15px; height: 15px; flex-shrink: 0; }

@@ -1,0 +1,85 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:5px;}
+
+:root{
+  --font:'DM Sans',system-ui,sans-serif;
+  --mono:'DM Mono',monospace;
+  --accent:#D9251D;
+  --accent-hover:#B01D16;
+  --accent-muted:rgba(217,37,29,.12);
+  --accent-hover-bg:rgba(217,37,29,.18);
+  --accent-rgb:217,37,29;
+  --tr:.16s ease;
+  --nav-h:52px;
+  --sb-w:220px;
+  --transition:.15s ease;
+
+  /* Dark theme as default */
+  --bg:#0f0f10;
+  --surface:#1a1a1b;
+  --surface2:#222224;
+  --surface3:#2a2a2c;
+  --card:#1a1a1b;
+  --card2:#222224;
+  --border:rgba(255,255,255,.08);
+  --border-med:rgba(255,255,255,.14);
+  --text-pri:#f0f0f0;
+  --text-sec:#8a8a94;
+  --text-muted:#4a4a54;
+  --badge-bg:#222224;
+  --badge-text:#666;
+  --input-bg:#222224;
+  --input-border:rgba(255,255,255,.12);
+  --input-focus:rgba(217,37,29,.3);
+  --shadow:0 4px 24px rgba(0,0,0,.5);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.6);
+}
+
+[data-theme="dark"]{
+  --bg:#0f0f10;
+  --surface:#1a1a1b;
+  --surface2:#222224;
+  --surface3:#2a2a2c;
+  --card:#1a1a1b;
+  --card2:#222224;
+  --border:rgba(255,255,255,.08);
+  --border-med:rgba(255,255,255,.14);
+  --text-pri:#f0f0f0;
+  --text-sec:#8a8a94;
+  --text-muted:#4a4a54;
+  --badge-bg:#222224;
+  --badge-text:#666;
+  --input-bg:#222224;
+  --input-border:rgba(255,255,255,.12);
+  --input-focus:rgba(217,37,29,.3);
+  --shadow:0 4px 24px rgba(0,0,0,.5);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.6);
+}
+
+[data-theme="light"]{
+  --bg:#f4f4f5;
+  --surface:#ffffff;
+  --surface2:#f0f0f2;
+  --surface3:#e8e8ec;
+  --card:#ffffff;
+  --card2:#f7f7f8;
+  --border:rgba(0,0,0,.09);
+  --border-med:rgba(0,0,0,.16);
+  --text-pri:#0f0f10;
+  --text-sec:#6b6b75;
+  --text-muted:#aaa;
+  --badge-bg:#ebebeb;
+  --badge-text:#888;
+  --input-bg:#ffffff;
+  --input-border:rgba(0,0,0,.14);
+  --input-focus:rgba(217,37,29,.15);
+  --shadow:0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg:0 12px 32px rgba(0,0,0,.12);
+}
+
+html,body,#root{height:100%;}
+body{font-family:var(--font);background:var(--bg);color:var(--text-pri);}
+
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--border-med);border-radius:4px;}

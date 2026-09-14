@@ -1,0 +1,34 @@
+# Secrets & config locale
+.env
+.env.*
+*.env
+application-prod.properties
+application-local.properties
+
+# Maven / backend
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+*.class
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+docs/
+todo.md

@@ -1,0 +1,139 @@
+/* Toolbar */
+.usr-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.usr-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+}
+
+.usr-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  color: var(--text-sec);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: background .12s, color .12s;
+}
+.usr-tab:hover { color: var(--text-pri); }
+.usr-tab.active {
+  background: var(--surface);
+  color: var(--text-pri);
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+.usr-tab-count {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 99px;
+  background: var(--surface3);
+  color: var(--text-muted);
+}
+.usr-tab.active .usr-tab-count {
+  background: var(--border);
+}
+
+/* User row */
+.usr-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  transition: background .1s;
+}
+.usr-row:last-child { border-bottom: none; }
+.usr-row:hover { background: var(--surface2); }
+
+/* Avatar */
+.usr-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* Info */
+.usr-info {
+  flex: 1;
+  min-width: 0;
+}
+.usr-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.usr-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-pri);
+}
+.usr-self {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+.usr-email {
+  font-size: 12px;
+  color: var(--text-sec);
+  display: block;
+  margin-top: 2px;
+}
+
+/* Badges */
+.usr-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+.usr-badge.admin {
+  background: rgba(217,37,29,.12);
+  color: #D9251D;
+}
+.usr-badge.member {
+  background: rgba(59,130,246,.12);
+  color: #2563EB;
+}
+[data-theme="light"] .usr-badge.admin { background: #FEF2F2; color: #B91C1C; }
+[data-theme="light"] .usr-badge.member { background: #EFF6FF; color: #1D4ED8; }
+
+/* Actions */
+.usr-actions {
+  flex-shrink: 0;
+}
+.usr-self-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+}
